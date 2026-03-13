@@ -4,6 +4,13 @@ A Machine Learning based web application that predicts possible diseases based o
 
 ---
 
+## 🌐 Live Demo
+
+Try the application here:
+
+https://disease-prediction-system-852t.onrender.com
+
+---
 ## 🚀 Features
 
 - Symptom based disease prediction

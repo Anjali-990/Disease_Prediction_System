@@ -24,7 +24,7 @@ This application predicts diseases based on user symptoms using a trained machin
 
 Users can:
 
-- Enter symptoms
+- Select symptoms
 - Get predicted disease
 - View prediction statistics
 - User can see disease Outbreak Alerts & User Recent Predictions charts
@@ -147,27 +147,27 @@ MYPROJECT
 
 Clone the repository -
 
-git clone https://github.com/yourusername/disease-prediction-system.git
+- git clone https://github.com/Anjali-990/Disease_Prediction_System.git
 
 Move into the project -
 
-cd disease-prediction-system
+- cd disease-prediction-system
 
 Install dependencies -
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 Run migrations -
 
-python manage.py migrate
+- python manage.py migrate
 
 Start server -
 
-python manage.py runserver
+- python manage.py runserver
 
 Open browser-
 
-http://127.0.0.1:8000
+- http://127.0.0.1:8000
 
 ---
 
@@ -185,4 +185,3 @@ http://127.0.0.1:8000
 
 Developed by **Anjali**
 **Major Project**
-

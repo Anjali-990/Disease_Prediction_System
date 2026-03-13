@@ -183,5 +183,5 @@ Open browser-
 
 ## 👩‍💻 Author
 
-Developed by **Anjali**
-**Major Project**
+- Developed by **Anjali**
+- **Major Project**

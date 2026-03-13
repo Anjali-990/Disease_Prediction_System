@@ -1,0 +1,127 @@
+{% extends "parent.html" %} {% load static %} {% block main %}
+
+<style>
+  .profile-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  }
+
+  .profile-header {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    padding: 25px;
+  }
+
+  .profile-avatar {
+    font-size: 50px;
+  }
+
+  .profile-info i {
+    width: 25px;
+  }
+
+  .profile-btn {
+    border-radius: 8px;
+  }
+</style>
+
+<div class="container profile-container">
+  <div class="col-md-6">
+    <div class="card profile-card">
+      <!-- Header -->
+
+      <div class="profile-header text-center">
+        <i class="fa-solid fa-user-circle profile-avatar mb-2"></i>
+
+        <h4>{{ request.user.username }}</h4>
+
+        <p class="mb-0">Account Profile</p>
+      </div>
+
+      <div class="card-body p-4 profile-info">
+        {% if messages %} {% for message in messages %}
+        <div
+          class="alert alert-{{ message.tags }} alert-dismissible fade show"
+          role="alert"
+        >
+          {{ message }}
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+        {% endfor %} {% endif %}
+        <!-- Username -->
+
+        <div class="d-flex align-items-center mb-3">
+          <i class="fa-solid fa-user text-primary me-3"></i>
+
+          <div>
+            <strong>Username</strong>
+            <br />
+            {{ request.user.username }}
+          </div>
+        </div>
+
+        <!-- Email -->
+
+        <div class="d-flex align-items-center mb-3">
+          <i class="fa-solid fa-envelope text-success me-3"></i>
+
+          <div>
+            <strong>Email</strong>
+            <br />
+            {{ request.user.email }}
+          </div>
+        </div>
+
+        <!-- Predictions Count -->
+
+        <div class="d-flex align-items-center mb-4">
+          <i class="fa-solid fa-chart-line text-warning me-3"></i>
+
+          <div>
+            <strong>Total Predictions</strong>
+            <br />
+            {{ prediction_count }}
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Buttons -->
+
+        <div class="d-flex justify-content-between">
+          <a
+            href="{% url 'password_change' %}"
+            class="btn btn-outline-primary profile-btn"
+          >
+            <i class="fa-solid fa-key me-1"></i>
+            Change Password
+          </a>
+
+          <a
+            href="{% url 'history' %}"
+            class="btn btn-outline-success profile-btn"
+          >
+            <i class="fa-solid fa-clock-rotate-left me-1"></i>
+            View History
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

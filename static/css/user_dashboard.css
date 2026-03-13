@@ -1,0 +1,44 @@
+/* Card hover effect */
+.hover-shadow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Gradient button */
+.btn-gradient-primary {
+  background: linear-gradient(90deg, #4e73df, #1cc88a);
+  border: none;
+  color: white;
+}
+
+/* Container spacing */
+.container.mt-4 {
+  margin-top: 2rem;
+}
+
+/* Card minimum height for empty states */
+.card-body.d-flex {
+  min-height: 120px;
+}
+
+/* Center icons in empty state messages */
+.card-body.d-flex .text-center i {
+  font-size: 2rem;
+  color: #6c757d;
+}
+
+/* Text styling for welcome section */
+.text-primary {
+  color: #0d6efd !important;
+}
+
+.text-secondary {
+  color: #6c757d !important;
+  font-size: 1.1rem;
+}
+
+.btn-lg {
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+}

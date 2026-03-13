@@ -1,0 +1,136 @@
+{% extends "parent.html" %} {% block main %}
+
+<div class="container mt-5">
+  <!-- Page Title -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-primary">About Our System</h2>
+    <p class="text-muted">
+      An AI-powered system designed to assist users in identifying possible
+      diseases based on symptoms.
+    </p>
+  </div>
+
+  <div class="row align-items-center">
+    <!-- Image Section -->
+    <div class="col-md-5 text-center">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2966/2966480.png"
+        class="img-fluid"
+        style="max-width: 250px"
+      />
+    </div>
+
+    <!-- Text Section -->
+    <div class="col-md-7">
+      <h4 class="mb-3">Project Overview</h4>
+
+      <p>
+        The <strong>Disease Prediction System</strong> is an intelligent web
+        application that predicts possible diseases based on symptoms entered by
+        users. The system uses <strong>Machine Learning algorithms</strong> to
+        analyze symptom data and provide predictions along with confidence
+        scores.
+      </p>
+
+      <p>
+        The goal of this project is to demonstrate how Artificial Intelligence
+        can assist in preliminary health analysis and help users understand
+        potential health conditions before consulting medical professionals.
+      </p>
+      <p>
+        Also, System have its <strong>Dataset</strong> limitations. Hence, its a
+        <strong>PROBABILISITC MODEL</strong>, not a diagnostic tool.
+      </p>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+
+  <div class="mt-5">
+    <h4 class="text-center mb-4">Key Features</h4>
+
+    <div class="row text-center">
+      <div class="col-md-3">
+        <div class="card shadow-sm p-3">
+          <h5>🧠 AI Prediction</h5>
+          <p class="text-muted small">
+            Predicts diseases using machine learning models.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm p-3">
+          <h5>📊 Confidence Score</h5>
+          <p class="text-muted small">
+            Displays prediction confidence percentage.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm p-3">
+          <h5>📜 Prediction History</h5>
+          <p class="text-muted small">
+            Stores user predictions for future reference.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-sm p-3">
+          <h5>📈 Admin Dashboard</h5>
+          <p class="text-muted small">
+            Visual analytics of diseases and trends.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technology Section -->
+
+  <div class="mt-5">
+    <h4 class="text-center mb-4">Technologies Used</h4>
+
+    <div class="row text-center">
+      <div class="col-md-3">
+        <div class="card p-3 shadow-sm">
+          <h5>🐍 Python</h5>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card p-3 shadow-sm">
+          <h5>🌐 Django</h5>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card p-3 shadow-sm">
+          <h5>📊 Machine Learning</h5>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card p-3 shadow-sm">
+          <h5>🎨 Bootstrap</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+
+  <div class="mt-5">
+    <div class="alert alert-warning text-center">
+      <strong>Disclaimer:</strong>
+
+      This system is developed for educational purposes and should not be
+      considered a substitute for professional medical advice. Always consult a
+      qualified healthcare professional for medical diagnosis.
+    </div>
+  </div>
+</div>
+
+{% endblock %}

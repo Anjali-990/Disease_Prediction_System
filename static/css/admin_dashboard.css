@@ -1,0 +1,21 @@
+/* Card shadows and rounded corners */
+.card {
+  border-radius: 10px;
+}
+
+/* Hover effect on alerts */
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  transition: 0.3s;
+}
+
+/* Table styling */
+.table-hover tbody tr:hover {
+  background-color: rgba(54, 162, 235, 0.1);
+}
+
+/* Center chart and set max width */
+#trendsChart {
+  max-width: 100%;
+  height: 400px;
+}

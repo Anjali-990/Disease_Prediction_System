@@ -1,0 +1,187 @@
+{% extends 'parent.html' %}
+{% load widget_tweaks %}
+{% block main %}
+
+<style>
+
+.signup-container{
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.signup-card{
+    border:none;
+    border-radius:12px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.08);
+}
+
+.signup-header{
+    background:linear-gradient(135deg,#10b981,#059669);
+    color:white;
+    border-radius:12px 12px 0 0;
+    padding:20px;
+}
+
+.signup-header h4{
+    margin:0;
+    font-weight:600;
+}
+
+.input-group-text{
+    background:#f3f4f6;
+    border-right:none;
+}
+
+.form-control{
+    border-left:none;
+}
+
+.form-control:focus{
+    box-shadow:none;
+    border-color:#10b981;
+}
+
+.signup-btn{
+    background:#10b981;
+    border:none;
+    font-weight:500;
+    padding:10px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.signup-btn:hover{
+    background:#04875d !important;
+}
+
+.extra-links a{
+    text-decoration:none;
+    font-size:14px;
+}
+
+.extra-links a:hover{
+    text-decoration:underline;
+}
+
+</style>
+
+
+<div class="container signup-container">
+
+<div class="col-md-5">
+
+<div class="card signup-card">
+
+<div class="signup-header text-center">
+<i class="fa-solid fa-user-plus fa-2x mb-2"></i>
+<h4>Create Account</h4>
+</div>
+
+
+<div class="card-body p-4">
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-info">{{ message }}</div>
+{% endfor %}
+{% endif %}
+
+<form method="POST">
+{% csrf_token %}
+
+<!-- Username -->
+
+<div class="mb-3">
+
+<label class="form-label">Username</label>
+
+<div class="input-group">
+
+<span class="input-group-text">
+<i class="fa-solid fa-user"></i>
+</span>
+
+{{ form.username|add_class:"form-control"|attr:"placeholder:Enter username" }}
+
+</div>
+
+</div>
+
+
+<!-- Email -->
+
+<div class="mb-3">
+
+<label class="form-label">Email</label>
+
+<div class="input-group">
+
+<span class="input-group-text">
+<i class="fa-solid fa-envelope"></i>
+</span>
+
+{{ form.email|add_class:"form-control"|attr:"placeholder:Enter email address" }}
+
+</div>
+
+</div>
+
+
+<!-- Password -->
+
+<div class="mb-3">
+
+<label class="form-label">Password</label>
+
+<div class="input-group">
+
+<span class="input-group-text">
+<i class="fa-solid fa-lock"></i>
+</span>
+
+{{ form.password|add_class:"form-control"|attr:"placeholder:Create password" }}
+
+</div>
+
+</div>
+
+
+<!-- Signup Button -->
+
+<div class="d-grid mb-3">
+
+<button type="submit" class="btn signup-btn text-white">
+<i class="fa-solid fa-user-plus me-2"></i>
+Create Account
+</button>
+
+</div>
+
+</form>
+
+<hr>
+
+<!-- Login link -->
+
+<div class="text-center">
+
+<p class="mb-0">
+Already have an account?
+<a href="{% url 'login' %}" class="fw-semibold text-success">
+Login
+</a>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
